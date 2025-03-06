@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:yolo/screens/ginie_screen.dart';
+import 'package:yolo/screens/home_scree.dart';
 import 'package:yolo/screens/yolo_play.dart';
 import 'package:yolo/widgets/custom_roind_button.dart';
 
@@ -11,9 +13,9 @@ class BottomNavBarScreen extends StatefulWidget {
 
 class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
   final List<Widget> _widgetList = [
-    Text("Home"),
+    HomeScree(),
     YoloPlay(),
-    Text("Ginie"),
+    GinieScreen(),
   ];
   int _currentIndex = 1;
 
@@ -52,7 +54,7 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
         ],
         currentIndex: _currentIndex,
         selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.grey.withOpacity(0.6),
+        unselectedItemColor: Colors.grey.withValues(alpha: .6),
         onTap: (value) {
           setState(() {
             _currentIndex = value;

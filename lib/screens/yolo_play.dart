@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
@@ -68,7 +66,11 @@ class _YoloPlayState extends State<YoloPlay> {
                 ],
               ),
               SizedBox(height: 30),
-              !_isSelected ? DebitCard() : Container(),
+              !_isSelected
+                  ? DebitCard()
+                  : Center(
+                      child: Text("Comming Soon pay system"),
+                    ),
             ],
           ),
         ),
